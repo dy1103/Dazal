@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 
 client = discord.Client()
 
@@ -22,5 +23,5 @@ async def on_message(message):
     if message.content.startswith('!유튜브'):
         await client.send_message(message.channel,"https://www.youtube.com/channel/UCntJ_88iKtM0LE4dX5ovqFw?view_as=subscriber")
 
-
-client.run('NTU0Mjc5NTAxMDE0NzYxNTA4.D2aUpg.l5SW6-Fy8OymmngugxlhwRR4E4c')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
