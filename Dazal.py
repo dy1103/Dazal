@@ -9,7 +9,7 @@ client = discord.Client()
 async def on_ready():
     print("login")
     print("-------------------")
-    await client.change_presence(game=discord.Game(name='아무짓도 안하는중', type=1))
+    await client.change_presence(game=discord.Game(name='!명령어', type=1))
 
 
 @client.event
@@ -39,7 +39,7 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content.startswith('!명령어'):
-        await client.send_message(message.channel,"[!명령어], [!시참], [!카페], [!유튜브], [!트위치]")
+        await client.send_message(message.channel,"명령어, 시참, 카페, 유튜브, 트위치")
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
