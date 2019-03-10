@@ -39,7 +39,7 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content.startswith('!명령어'):
-        await client.send_message(message.channel,"!명령어, !시참, !카페, !유튜브, !트위치")
+        await client.send_message(message.channel,"[!명령어], [!시참], [!카페], [!유튜브], [!트위치]")
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
