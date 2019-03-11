@@ -18,7 +18,6 @@ async def on_message(message):
         await client.send_message(message.channel, "명령어, 트위치, 시참, 카페, 유튜브")
         
     if message.content.startswith('!트위치'):
-        
         await client.send_message(message.channel, "https://www.twitch.tv/dazal3635")
         
     if message.content.startswith('!유튜브'):
