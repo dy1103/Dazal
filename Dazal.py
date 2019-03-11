@@ -36,11 +36,10 @@ async def on_message(message):
         await client.send_message(message.channel, choiceresult)
         
     if message.content == '!커맨드':
-        await client.send_message(message.channel, '')
-            embed = discord.Embed(title="이거슨 제목이라 합니다!", description="이거슨 설명이라고 합니다!", color=0x00ff00)
-            embed.set_footer(text="이거슨 푸터라고 합니다!")
-            embed.set_image(url="https://i.imgur.com/xzPCXp8.jpg")
-        await app.send_message(message.channel, embed=embed)
+        await client.send_message(message.channel,"답변")
+        embed = discord.Embed(title="명령어", description="!트위치, !시참, !카페, !유튜브", color=0x00ff00)
+        embed.set_footer(text = "DaZal★Bot")
+        await client.send_message(message.channel, embed=embed)
     
         
 access_token = os.environ["BOT_TOKEN"]
