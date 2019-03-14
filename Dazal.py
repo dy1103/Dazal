@@ -1,6 +1,4 @@
 import discord
-import asyncio
-import os
 
 client = discord.Client()
 
@@ -26,12 +24,13 @@ async def on_message(message):
     if message.content.startswitch('!시참'):
         await client.send_message(message.channel, "주소 : handazal.kro.kr / 1.7.10 + 디코 시참방 무조건 들어와야 함")
 
-    if message.content == '!명령어':
+    if message.content.startswitch('!명령어'):
         await client.send_message(message.channel,"")
         embed = discord.Embed(title="명령어", description="!트위치, !시참, !카페, !유튜브", color=0x00ff00)
         embed.set_footer(text = "DaZal★Bot")
         await client.send_message(message.channel, embed=embed)
+
     
-        
+       
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
